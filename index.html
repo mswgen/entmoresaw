@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>엔트리 조회수 늘리기</title>
+    <style>
+      .grid{
+        display:grid;
+        grid-template-columns:auto auto auto;
+      }
+    </style>
+    <script>
+      function moresaw(){
+        function URL(id2, username2){
+          return 'https://playentry.org/'+username2+'/'+id2;
+        }
+        document.querySelector('.grid').innerHTML = '<iframe src='+URL(id, username)+'>';
+        for(i = 0; i < 14; i++){
+          document.querySelector('.grid').innerHTML += '<iframe src='+URL(id, username)+'>';
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input type="button" value="조회수 15회 늘리기" onclick="moresaw();">
+    <script>
+      var id = prompt('작품 ID 입력', "");
+      var username = prompt('작품 제작자 닉네임 입력', "");
+    </script>
+    <div class="grid">
+      <iframe class="items" src="https://playentry.org/"></iframe>
+      <iframe class="items" src="https://playentry.org/"></iframe>
+      <iframe class="items" src="https://playentry.org/"></iframe>
+      <iframe class="items" src="https://playentry.org/"></iframe>
+      <iframe class="items" src="https://playentry.org/"></iframe>
+      <iframe class="items" src="https://playentry.org/"></iframe>
+      <iframe class="items" src="https://playentry.org/"></iframe>
+      <iframe class="items" src="https://playentry.org/"></iframe>
+      <iframe class="items" src="https://playentry.org/"></iframe>
+      <iframe class="items" src="https://playentry.org/"></iframe>
+      <iframe class="items" src="https://playentry.org/"></iframe>
+      <iframe class="items" src="https://playentry.org/"></iframe>
+      <iframe class="items" src="https://playentry.org/"></iframe>
+      <iframe class="items" src="https://playentry.org/"></iframe>
+      <iframe class="items" src="https://playentry.org/"></iframe>
+    </div>
+  </body>
+</html>
